@@ -72,7 +72,17 @@ public class ShowConfirmDialogSample extends javax.swing.JFrame {
         //get the result, select the corresponding item in the combobox
         //show a message dialog
         int result=JOptionPane.showConfirmDialog(this, "Confirm?", "test", JOptionPane.YES_NO_CANCEL_OPTION);
-        
+        switch (result) {
+            case JOptionPane.YES_OPTION:
+                jComboBox1.setSelectedIndex(0);
+                break;
+            case JOptionPane.NO_OPTION:
+                jComboBox1.setSelectedIndex(1);
+                break;
+            default:
+                jComboBox1.setSelectedIndex(2);
+                break;
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
